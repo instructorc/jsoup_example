@@ -5,10 +5,17 @@ import org.jsoup.nodes.*;
 import org.jsoup.select.*;
 public class App {
     public static void main(String[] args) throws Exception {
-        Document doc = Jsoup.connect("http://www.mplsrenters.com/").get();
+        Document doc = Jsoup.connect("https://www.luc.edu/").get();
         String title = doc.title();
+        System.out.println(title);
 
-        String someText = doc.getElementById("typed-strings").html();
-        System.out.println(someText);
+        Element policy = doc.getElementById("anti-discriminatory-content");
+
+        String policyHeader = policy.select("h5").first().text();
+
+        String policyText = policy.select("p").first().text();
+        
+        System.out.println(policyHeader);
+        System.out.println(policyText);
     }
 }
