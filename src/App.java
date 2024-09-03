@@ -5,6 +5,7 @@ import org.jsoup.nodes.*;
 import org.jsoup.select.*;
 public class App {
     public static void main(String[] args) throws Exception {
+        //Getting the URL
         Document doc = Jsoup.connect("https://www.luc.edu/").get();
         String title = doc.title();
         
