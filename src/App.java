@@ -15,7 +15,7 @@ public class App {
 
         String policyText = policy.select("p").first().text();
         
-
+        //output
         System.out.println(title);
         System.out.println(policyHeader);
         System.out.println(policyText);
